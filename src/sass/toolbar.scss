@@ -1,0 +1,12 @@
+.excel__toolbar {
+  border-top: 2px solid $borderColor;
+  border-bottom: 2px solid $borderColor;
+  background: $toolbarBg;
+  padding: $toolbarPadding;
+
+  &-btn {
+    @include button($fontColor, 21px);
+    margin: 0 5px;
+  }
+  
+}
