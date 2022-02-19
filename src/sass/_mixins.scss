@@ -1,0 +1,33 @@
+@mixin button($color: #fff, $sizeIcon: 18px) {
+  padding: 8px;
+  border-radius: $borderRadius;
+  border: 1px solid $btn;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  transition: all .5s ease;
+
+  background: transparent;
+
+  & span {
+    font-size: $sizeIcon;
+    color: $color;
+  }
+
+  &:hover {
+    span {
+      color: $fontColor;
+    }
+  }
+
+  &:hover {
+    background: $btnHover;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  &:active {
+    background: $btnActive;
+  }
+
+
+}

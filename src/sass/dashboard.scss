@@ -1,0 +1,83 @@
+.db {
+  &__header {
+    &-title {
+      font-size: $dbHeaderTitle;
+      text-align: center;
+      margin: 20px;
+    }
+  }
+
+  &__new {
+    min-height: 350px;
+    border-bottom: 2px solid $borderColor;
+    border-top: 2px solid $borderColor;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16),
+      inset 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: $dbTableBg;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+
+    &-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    &-table {
+      font-size: $dbNewFontSize;
+      min-height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: $borderRadius;
+      transition: all 0.5s ease;
+      &:hover {
+        background: darken(#fff, 30);
+        color: #fff;
+      }
+    }
+  }
+
+  &__table {
+    margin: 30px auto;
+    max-width: 1230px;
+    padding: 0 15px;
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      &-title {
+        font-size: 24px;
+        color: #888;
+      }
+
+      &-date {
+        font-size: 21px;
+      }
+    }
+
+    &-unit {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      &-title {
+        transition: all 0.3s ease;
+        &:hover {
+          color: #888;
+        }
+      }
+      &-date {
+        font-size: 21px;
+      }
+    }
+  }
+}

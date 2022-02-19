@@ -1,0 +1,25 @@
+.excel__formula {
+  border-bottom: 1px solid $borderColor;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+
+  &-info {
+    font-size: 22px;
+    border-right: 1px solid $borderColor;
+    min-width: $formulaWidth;
+    min-height: $formulaHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-input {
+    width: 100%;
+    height: 100%;
+    background: $borderColor;
+    font-size: $formulaSize;
+    outline: transparent;
+    padding: 2px;
+  }
+}

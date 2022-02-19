@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Pure JavaScript Excel App</title>
+</head>
+
+<body>
+
+  <div id="app" class="container">
+
+    <div class="excel">
+
+      <div class="excel__header">
+
+        <input type="text" class="excel__header-input" placeholder="Новая таблица">
+
+        <div class="excel__header-btns">
+          <button class="excel__header-btn delete">
+            <span class="material-icons">
+              delete
+            </span>
+          </button>
+          <button class="excel__header-btn exit">
+            <span class="material-icons">
+              exit_to_app
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="excel__toolbar">
+
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_align_left
+          </span>
+        </button>
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_align_center
+          </span>
+        </button>
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_align_right
+          </span>
+        </button>
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_bold
+          </span>
+        </button>
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_italic
+          </span>
+        </button>
+        <button class="excel__toolbar-btn">
+          <span class="material-icons">
+            format_underlined
+          </span>
+        </button>
+
+      </div>
+
+      <div class="excel__formula">
+        <div class="excel__formula-info">fx</div>
+        <div class="excel__formula-input" contenteditable="true"></div>
+      </div>
+
+      <div class="excel__table">
+        <div class="excel__table-row">
+          <div class="excel__table-row-info"></div>
+          <div class="excel__table-row-data">
+            <div class="excel__table-row-column">A</div>
+            <div class="excel__table-row-column">B</div>
+            <div class="excel__table-row-column">C</div>
+          </div>
+        </div>
+        <div class="excel__table-row">
+          <div class="excel__table-row-info">1</div>
+          <div class="excel__table-row-data">
+            <div class="excel__table-row-cell" contenteditable="true">A1</div>
+            <div class="excel__table-row-cell" contenteditable="true">B1</div>
+            <div class="excel__table-row-cell" contenteditable="true">C1</div>
+          </div>
+        </div>
+        <div class="excel__table-row">
+          <div class="excel__table-row-info">2</div>
+          <div class="excel__table-row-data">
+            <div class="excel__table-row-cell" contenteditable="true">A2</div>
+            <div class="excel__table-row-cell" contenteditable="true">B2</div>
+            <div class="excel__table-row-cell" contenteditable="true">C2</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
