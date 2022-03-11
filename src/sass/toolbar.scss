@@ -7,6 +7,9 @@
   &-btn {
     @include button($fontColor, 21px);
     margin: 0 5px;
+    span {
+      pointer-events: none;
+    }
   }
   
 }

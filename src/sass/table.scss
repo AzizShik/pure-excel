@@ -1,4 +1,5 @@
 .excel__table {
+  overflow-x: auto;
   &-row {
     display: flex;
     font-size: $tableFontSize;
