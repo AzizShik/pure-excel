@@ -3,38 +3,45 @@ const CODES = {
   Z: 90,
 };
 
-function toCell() {
+function toCell(_, col) {
   return `
-    <div class="excel__table-row-cell" contenteditable="true"></div>
+    <div class="excel__table-row-cell" contenteditable="true" 
+    data-col='${col}'></div>
   `;
 }
 
-function createCol(col) {
+function toColumn(col, index) {
   return `
-  <div class="excel__table-row-column">${col}</div>
-  `;
+  <div class="excel__table-row-column" data-type="resizable" 
+  data-col="${index}">
+    ${col}
+    <div class="col-resize" data-resize="col"></div>
+  </div>`;
 }
 
 function createRow(index, content) {
+  const resizer = index
+    ? `<div class="row-resize" data-resize='row'></div>`
+    : '';
   return `
-  <div class="excel__table-row">
-    <div class="excel__table-row-info">${index ? index : ''}</div>
+  <div class="excel__table-row" data-type="resizable" >
+    <div class="excel__table-row-info">
+      ${index ? index : ''}
+      ${resizer}
+    </div>
     <div class="excel__table-row-data">${content}</div>
-  </div>
-  `;
+  </div>`;
+}
+
+function toChar(_, index) {
+  return String.fromCharCode(CODES.A + index);
 }
 
 export function createTable(rowsCount = 15) {
   const colsCount = CODES.Z - CODES.A + 1;
   const rows = [];
 
-  const cols = new Array(colsCount).fill('').map((el, index) => {
-    return String.fromCharCode(CODES.A + index);
-  }).map((el) => {
-    return createCol(el);
-  }).join('');
-
-  console.log(cols);
+  const cols = new Array(colsCount).fill('').map(toChar).map(toColumn).join('');
 
   rows.push(createRow(null, cols));
 
