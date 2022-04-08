@@ -16,7 +16,8 @@
     "no-trailing-spaces": 0,
     "comma-dangle": 0,
     "no-unused-vars": 0,
-    "operator-linebreak": 0
+    "operator-linebreak": 0,
+    "space-before-function-paren": 0
   },
   
   "extends": ["eslint:recommended", "google"]
